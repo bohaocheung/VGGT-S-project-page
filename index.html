@@ -3,518 +3,400 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="Project Title | Project Homepage">
+  <meta name="description" content="An academic project homepage scaffold for presenting a paper, model, data, and results.">
+  <meta name="keywords" content="robotics, machine learning, project homepage, research website">
+  <meta name="author" content="Project Team">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
 
-  <!-- Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Project Homepage">
+  <meta property="og:title" content="Project Title">
+  <meta property="og:description" content="An academic project homepage scaffold for presenting a paper, model, data, and results.">
+  <meta property="og:image" content="static/images/carousel1.jpg">
+
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Project Title">
+  <meta name="twitter:description" content="An academic project homepage scaffold for presenting a paper, model, data, and results.">
+  <meta name="twitter:image" content="static/images/carousel1.jpg">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <title>Project Title | Project Homepage</title>
 
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
+
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+  <script defer src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 5l-7 7 1.4 1.4 4.6-4.6V19h2V8.8l4.6 4.6L19 12z"></path>
+    </svg>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
+  <main>
+    <section class="project-hero" data-hero>
+      <div class="hero-bubbles" aria-hidden="true">
+        <span class="bubble bubble-1"></span>
+        <span class="bubble bubble-2"></span>
+        <span class="bubble bubble-3"></span>
+        <span class="bubble bubble-4"></span>
+        <span class="bubble bubble-5"></span>
+        <span class="bubble bubble-6"></span>
+        <span class="bubble bubble-7"></span>
+        <span class="bubble bubble-8"></span>
+        <span class="bubble bubble-9"></span>
+        <span class="bubble bubble-10"></span>
+        <span class="bubble bubble-11"></span>
+        <span class="bubble bubble-12"></span>
+        <span class="bubble bubble-13"></span>
+        <span class="bubble bubble-14"></span>
+        <span class="bubble bubble-15"></span>
+        <span class="bubble bubble-16"></span>
+        <span class="bubble bubble-17"></span>
+        <span class="bubble bubble-18"></span>
+        <span class="bubble bubble-19"></span>
+        <span class="bubble bubble-20"></span>
+      </div>
+      <div class="hero-title-wrap">
+        <div class="hero-logo-block" aria-hidden="true">
+          <div class="hero-logo-shell">
+            <img src="cologo/cologo.png" alt="" class="hero-logo-image">
+          </div>
+        </div>
+      </div>
+      <div class="cola-surface" aria-hidden="true">
+        <div class="cola-wave cola-wave-back"></div>
+        <div class="cola-wave cola-wave-front"></div>
+      </div>
+      <div class="hero-title-in-cola">
+        <h1 class="publication-title publication-title-cola" data-hero-title>
+          <span class="title-mark">Project Title:</span> An Open-Source Generalist Research Project
+        </h1>
+      </div>
+    </section>
+
+    <section class="after-hero">
+      <div class="container content-narrow">
+        <div class="collapsed-title-bar" data-collapsed-title>
+          <h2 class="collapsed-title">
+            <span class="title-mark">Project Title:</span> An Open-Source Generalist Research Project
+          </h2>
+        </div>
+        <div class="authors-block">
+          <p class="team-label">Project Team</p>
+
+          <div class="author-line author-line-blue">
+            <span class="author-block">First Author<sup>*</sup>,<sup>1</sup></span>
+            <span class="author-block">Second Author<sup>*</sup>,<sup>1</sup></span>
+            <span class="author-block">Third Author<sup>*</sup>,<sup>1,2</sup></span>
+            <span class="author-block">Fourth Author<sup>*</sup>,<sup>1</sup></span>
+            <span class="author-block">Fifth Author<sup>*</sup>,<sup>1</sup></span>
+          </div>
+
+          <div class="author-line author-line-amber">
+            <span class="author-block">Sixth Author<sup>3</sup></span>
+            <span class="author-block">Seventh Author<sup>2</sup></span>
+            <span class="author-block">Eighth Author<sup>1</sup></span>
+            <span class="author-block">Ninth Author<sup>1</sup></span>
+            <span class="author-block">Tenth Author<sup>1</sup></span>
+            <span class="author-block">Eleventh Author<sup>1</sup></span>
+          </div>
+
+          <div class="author-line author-line-green">
+            <span class="author-block">Twelfth Author<sup>1</sup></span>
+            <span class="author-block">Thirteenth Author<sup>4</sup></span>
+            <span class="author-block">Fourteenth Author<sup>4</sup></span>
+            <span class="author-block">Fifteenth Author<sup>4</sup></span>
+            <span class="author-block">Sixteenth Author<sup>2</sup></span>
+            <span class="author-block">Seventeenth Author<sup>2</sup></span>
+            <span class="author-block">Eighteenth Author<sup>1</sup></span>
+          </div>
+
+          <p class="authors-note">*denotes equal contribution, listed in alphabetical order</p>
+
+          <div class="affiliation-line">
+            <span>1. Institution One</span>
+            <span>2. Institution Two</span>
+            <span>3. Institution Three</span>
+            <span>4. Institution Four</span>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a href="static/pdfs/sample.pdf" target="_blank" class="resource-card">
+            <iconify-icon class="resource-icon resource-icon-paper" icon="academicons:arxiv" aria-hidden="true"></iconify-icon>
+            <span>Paper</span>
+          </a>
+          <a href="static/pdfs/sample.pdf" target="_blank" class="resource-card">
+            <iconify-icon class="resource-icon resource-icon-pdf" icon="fluent:document-copy-24-filled" aria-hidden="true"></iconify-icon>
+            <span>Supplementary</span>
+          </a>
+          <a href="https://github.com" target="_blank" class="resource-card">
+            <iconify-icon class="resource-icon resource-icon-code" icon="simple-icons:github" aria-hidden="true"></iconify-icon>
+            <span>Code</span>
+          </a>
+          <a href="https://huggingface.co" target="_blank" class="resource-card">
+            <iconify-icon class="resource-icon resource-icon-model" icon="mdi:weight-kilogram" aria-hidden="true"></iconify-icon>
+            <span>Weights</span>
+          </a>
+          <a href="https://huggingface.co/datasets" target="_blank" class="resource-card">
+            <iconify-icon class="resource-icon resource-icon-datasets" icon="solar:database-bold-duotone" aria-hidden="true"></iconify-icon>
+            <span>Datasets</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-band">
+      <div class="container media-carousel" data-carousel>
+        <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Previous slide" data-carousel-prev>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.4 4.6 8 12l7.4 7.4-1.4 1.4L5.2 12 14 3.2z"></path>
+          </svg>
         </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
+        <div class="media-carousel-viewport">
+          <div class="media-carousel-track" data-carousel-track>
+            <article class="media-tile" data-carousel-slide>
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/carousel1.mp4" type="video/mp4">
+              </video>
+              <span class="media-speed-badge">1x</span>
+            </article>
+            <article class="media-tile" data-carousel-slide>
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/carousel2.mp4" type="video/mp4">
+              </video>
+              <span class="media-speed-badge">1x</span>
+            </article>
+            <article class="media-tile" data-carousel-slide>
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/carousel3.mp4" type="video/mp4">
+              </video>
+              <span class="media-speed-badge">1x</span>
+            </article>
+            <article class="media-tile" data-carousel-slide>
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/banner_video.mp4" type="video/mp4">
+              </video>
+              <span class="media-speed-badge">1x</span>
+            </article>
+            <article class="media-tile" data-carousel-slide>
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/carousel1.mp4" type="video/mp4">
+              </video>
+              <span class="media-speed-badge">1x</span>
+            </article>
           </div>
         </div>
+
+        <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Next slide" data-carousel-next>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m8.6 19.4 7.4-7.4-7.4-7.4L10 3.2 18.8 12 10 20.8z"></path>
+          </svg>
+        </button>
+
+        <div class="carousel-dots" data-carousel-dots></div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section class="section content-section">
+      <div class="container content-wide">
+        <p class="lead-paragraph">
+          We introduce <strong>Project Title</strong>, our placeholder effort for building an open-source, widely applicable
+          research system. This page is organized to highlight the central idea, team, resources, media, method, data, and
+          results while keeping the title, authors, figures, and links easy to replace with your own project details.
+        </p>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+        <img src="static/images/carousel1.jpg" alt="Project teaser image" class="teaser-image">
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+        <div class="video-embed-wrap">
+          <iframe
+            width="800"
+            height="450"
+            src="https://www.youtube.com/embed/JkaxUblCGz0"
+            title="Project video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
           </iframe>
-        
+        </div>
       </div>
-    </div>
-  </section>
-<!--End paper poster -->
+    </section>
 
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
+    <section class="section content-section" id="model">
+      <div class="container content-wide">
+        <h2 class="section-title">The Model</h2>
+        <p class="body-paragraph">
+          The design of Project Title emphasizes flexibility and scale: the system is meant to support multiple task
+          definitions, observation layouts, and deployment settings while remaining simple enough to finetune or adapt.
+          This placeholder block should eventually describe your architecture, input modalities, output space, and why
+          the method is broadly useful.
+        </p>
+        <img src="static/images/carousel2.jpg" alt="Model overview figure" class="section-figure section-figure-wide">
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+    </section>
+
+    <section class="section content-section" id="data">
+      <div class="container content-wide">
+        <h2 class="section-title">The Data</h2>
+        <p class="body-paragraph">
+          This section is reserved for dataset composition, collection diversity, task coverage, and benchmark setup. If
+          your project is not primarily data-centric, it can easily become a training pipeline or system setup section.
+          The structure here uses compact prose followed by a single supporting figure for fast scanning.
+        </p>
+        <img src="static/images/carousel3.jpg" alt="Dataset overview figure" class="section-figure section-figure-narrow">
+      </div>
+    </section>
+
+    <section class="section content-section" id="results">
+      <div class="container content-wide">
+        <h2 class="section-title">The Results</h2>
+        <p class="body-paragraph">
+          We evaluate Project Title across several placeholder tasks and scenarios. This section is intended to hold your
+          main quantitative comparison, finetuning or ablation results, and a concise narrative for where the gains come
+          from. The tables below use a compact black-rule academic style for dense quantitative comparison.
+        </p>
+
+        <img src="static/images/carousel4.jpg" alt="Results figure" class="section-figure section-figure-wide">
+
+        <div class="tables-wrap">
+          <table class="results-table results-table-compact">
+            <thead>
+              <tr>
+                <th colspan="4" class="table-title">Zero-shot</th>
+              </tr>
+              <tr class="header-rule">
+                <th></th>
+                <th>Task A</th>
+                <th>Task B</th>
+                <th>Task C</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Baseline 1</td>
+                <td>0.20</td>
+                <td>0.35</td>
+                <td>0.60</td>
+              </tr>
+              <tr>
+                <td>Baseline 2</td>
+                <td>0.50</td>
+                <td>&mdash;</td>
+                <td>0.85</td>
+              </tr>
+              <tr class="strong-row bottom-rule">
+                <td>Project Title</td>
+                <td>0.50</td>
+                <td>0.70</td>
+                <td>0.80</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="results-table results-table-wide">
+            <thead>
+              <tr>
+                <th colspan="8" class="table-title">Finetuning</th>
+              </tr>
+              <tr class="header-rule">
+                <th></th>
+                <th>Setup 1</th>
+                <th>Setup 2</th>
+                <th>Setup 3<sup>*</sup></th>
+                <th>Setup 4<sup>&dagger;</sup></th>
+                <th>Setup 5<sup>&dagger;</sup></th>
+                <th>Setup 6</th>
+                <th>Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>From Scratch</td>
+                <td>0.25</td>
+                <td>0.45</td>
+                <td>0.10</td>
+                <td>0.00</td>
+                <td>0.20</td>
+                <td>0.20</td>
+                <td>0.20</td>
+              </tr>
+              <tr>
+                <td>Backbone Init</td>
+                <td>0.30</td>
+                <td>0.00</td>
+                <td>0.05</td>
+                <td>0.00</td>
+                <td>0.50</td>
+                <td>0.10</td>
+                <td>0.15</td>
+              </tr>
+              <tr class="strong-row bottom-rule">
+                <td>Project Title</td>
+                <td>0.50</td>
+                <td>0.75</td>
+                <td>0.70</td>
+                <td>0.60</td>
+                <td>0.80</td>
+                <td>1.00</td>
+                <td>0.72</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footnotes">
+          <span><sup>*</sup> New observation input placeholder</span>
+          <span><sup>&dagger;</sup> New action space placeholder</span>
+        </div>
+
+        <p class="body-paragraph body-paragraph-spaced">
+          Out-of-the-box, this placeholder page provides a large title treatment, compact author metadata, a horizontal
+          resource row, a full-width visual band, a single-column narrative, and two dense quantitative tables. The
+          remaining work is swapping in your real content.
+        </p>
+      </div>
+    </section>
+
+    <section class="section citation-section" id="citation">
+      <div class="container content-wide">
+        <div class="bibtex-header">
+          <h2 class="section-title no-accent">Citation</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m0 16H10V7h9z"></path>
+            </svg>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <p class="citation-note">Please replace the placeholder BibTeX below with your actual paper metadata.</p>
+        <pre id="bibtex-code"><code>@inproceedings{project2026,
+  title={Project Title: An Open-Source Generalist Research Project},
+  author={First Author and Second Author and Third Author and Fourth Author},
+  booktitle={Conference Name},
+  year={2026},
+  url={https://your-project-page.example}
 }</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
+    <div class="container content-wide">
+      <div class="content has-text-centered">
+        <p>
+          This homepage is adapted inside the local Academic Project Page template and customized for a research project
+          with editable authors, resources, media, results, and citation metadata.
+        </p>
       </div>
     </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>
