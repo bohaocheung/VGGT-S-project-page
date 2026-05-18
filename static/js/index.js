@@ -859,32 +859,45 @@ function setupMetricsDashboard(horizontalMetrics) {
   const chart = dashboard.querySelector("[data-metric-chart]");
   const tabs = Array.from(dashboard.querySelectorAll("[data-metric-tab]"));
   const datasets = horizontalMetrics || {
-    success: [
-      ["Baseline 1", 42, "#64748b", "#94a3b8", "rgba(100, 116, 139, 0.13)"],
-      ["Baseline 2", 58, "#7c3aed", "#a78bfa", "rgba(124, 58, 237, 0.12)"],
-      ["Project Title", 82, "#ef4b34", "#f59e0b", "rgba(239, 75, 52, 0.13)"]
+    // success: [
+    //   ["Baseline 1", 42, "#64748b", "#94a3b8", "rgba(100, 116, 139, 0.13)"],
+    //   ["Baseline 2", 58, "#7c3aed", "#a78bfa", "rgba(124, 58, 237, 0.12)"],
+    //   ["Project Title", 82, "#ef4b34", "#f59e0b", "rgba(239, 75, 52, 0.13)"]
+    // ],
+    // generalization: [
+    //   ["Seen tasks", 86, "#0ea5e9", "#35a7ff", "rgba(14, 165, 233, 0.13)"],
+    //   ["New objects", 74, "#16a34a", "#22c55e", "rgba(34, 197, 94, 0.13)"],
+    //   ["New scenes", 68, "#f97316", "#facc15", "rgba(249, 115, 22, 0.13)"]
+    // ],
+    // efficiency: [
+    //   ["Training cost", 54, "#8b5cf6", "#d946ef", "rgba(139, 92, 246, 0.13)"],
+    //   ["Fine-tune time", 71, "#06b6d4", "#2dd4bf", "rgba(6, 182, 212, 0.13)"],
+    //   ["Inference FPS", 88, "#ef4b34", "#fb7185", "rgba(239, 75, 52, 0.13)"]
+    // ],
+    ego2exo: [
+      ["ObjectRelator", 45.4, "#64748b", "#94a3b8", "rgba(100, 116, 139, 0.13)"],
+      ["DOMR", 49.7, "#7c3aed", "#a78bfa", "rgba(124, 58, 237, 0.12)"],
+      ["VGGT-S(ZSL)", 54.1, "#2563eb", "#60a5fa", "rgba(37, 99, 235, 0.13)"],
+      ["VGGT-S(Ours)", 67.7, "#ef4b34", "#f59e0b", "rgba(239, 75, 52, 0.13)"]
     ],
-    generalization: [
-      ["Seen tasks", 86, "#0ea5e9", "#35a7ff", "rgba(14, 165, 233, 0.13)"],
-      ["New objects", 74, "#16a34a", "#22c55e", "rgba(34, 197, 94, 0.13)"],
-      ["New scenes", 68, "#f97316", "#facc15", "rgba(249, 115, 22, 0.13)"]
+    exo2ego: [
+      ["ObjectRelator", 50.9, "#0ea5e9", "#35a7ff", "rgba(14, 165, 233, 0.13)"],
+      ["DOMR", 55.2, "#16a34a", "#22c55e", "rgba(34, 197, 94, 0.13)"],
+      ["VGGT-S(ZSL)", 58.4, "#0f766e", "#2dd4bf", "rgba(15, 118, 110, 0.13)"],
+      ["VGGT-S(Ours)", 68.0, "#f97316", "#facc15", "rgba(249, 115, 22, 0.13)"]
     ],
-    efficiency: [
-      ["Training cost", 54, "#8b5cf6", "#d946ef", "rgba(139, 92, 246, 0.13)"],
-      ["Fine-tune time", 71, "#06b6d4", "#2dd4bf", "rgba(6, 182, 212, 0.13)"],
-      ["Inference FPS", 88, "#ef4b34", "#fb7185", "rgba(239, 75, 52, 0.13)"]
-    ]
   };
 
   function renderMetric(metricName) {
-    const rows = datasets[metricName] || datasets.success;
+    const rows = datasets[metricName] || datasets.ego2exo;
     chart.innerHTML = rows.map(([label, value, from, to, soft]) => `
       <div class="metric-row" style="--metric-from: ${from}; --metric-to: ${to}; --metric-soft: ${soft};">
         <span class="metric-label">${label}</span>
         <span class="metric-bar-track">
           <span class="metric-bar" style="width: ${value}%;"></span>
         </span>
-        <span class="metric-value">${value}%</span>
+        <!-- <span class="metric-value">${value}%</span> -->            
+        <span class="metric-value">${Number(value).toFixed(1)}%</span>
       </div>
     `).join("");
 
@@ -897,7 +910,7 @@ function setupMetricsDashboard(horizontalMetrics) {
     tab.addEventListener("click", () => renderMetric(tab.dataset.metricTab));
   });
 
-  renderMetric("success");
+  renderMetric("ego2exo");
 }
 
 function escapeHtml(value) {

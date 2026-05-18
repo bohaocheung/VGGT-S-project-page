@@ -48,87 +48,102 @@
       demoAutoplayInterval: 6000,
       verticalChartAutoplayInterval: 7000,
       horizontalMetrics: {
-        success: [
-          ["Baseline 1", 42, "#64748b", "#94a3b8", "rgba(100, 116, 139, 0.13)"],
-          ["Baseline 2", 58, "#7c3aed", "#a78bfa", "rgba(124, 58, 237, 0.12)"],
-          ["Project Title", 82, "#ef4b34", "#f59e0b", "rgba(239, 75, 52, 0.13)"]
+        ego2exo: [
+          ["ObjectRelator", 45.4, "#64748b", "#94a3b8", "rgba(100, 116, 139, 0.13)"],
+          ["DOMR", 49.7, "#7c3aed", "#a78bfa", "rgba(124, 58, 237, 0.12)"],
+          ["VGGT-S(ZSL)", 54.1, "#2563eb", "#60a5fa", "rgba(37, 99, 235, 0.13)"],
+          ["VGGT-S(Ours)", 67.7, "#ef4b34", "#f59e0b", "rgba(239, 75, 52, 0.13)"]
         ],
-        generalization: [
-          ["Seen tasks", 86, "#0ea5e9", "#35a7ff", "rgba(14, 165, 233, 0.13)"],
-          ["New objects", 74, "#16a34a", "#22c55e", "rgba(34, 197, 94, 0.13)"],
-          ["New scenes", 68, "#f97316", "#facc15", "rgba(249, 115, 22, 0.13)"]
+        exo2ego: [
+          ["ObjectRelator", 50.9, "#0ea5e9", "#35a7ff", "rgba(14, 165, 233, 0.13)"],
+          ["DOMR", 55.2, "#16a34a", "#22c55e", "rgba(34, 197, 94, 0.13)"],
+          ["VGGT-S(ZSL)", 58.4, "#0f766e", "#2dd4bf", "rgba(15, 118, 110, 0.13)"],
+          ["VGGT-S(Ours)", 68.0, "#f97316", "#facc15", "rgba(249, 115, 22, 0.13)"]
         ],
-        efficiency: [
-          ["Training cost", 54, "#8b5cf6", "#d946ef", "rgba(139, 92, 246, 0.13)"],
-          ["Fine-tune time", 71, "#06b6d4", "#2dd4bf", "rgba(6, 182, 212, 0.13)"],
-          ["Inference FPS", 88, "#ef4b34", "#fb7185", "rgba(239, 75, 52, 0.13)"]
-        ]
       },
-      verticalCharts: [
-        {
-          id: "success-rate",
-          title: "Success Rate (%) ↑",
-          xAxisTitle: "Evaluation task",
-          yAxisTitle: "Success rate",
-          unit: "%",
-          caption: "Grouped task results in a kai0-inspired vertical chart. Hover over each bar to inspect exact values.",
-          categories: ["Task A", "Task B", "Task C"],
-          series: [
-            { name: "Baseline 1", values: [42, 51, 60], color: "#4f8cff" },
-            { name: "Baseline 2", values: [58, 63, 68], color: "#f2b84b" },
-            { name: "Project Title", values: [82, 86, 90], color: "#2fbf8f", highlight: true }
-          ]
-        },
-        {
-          id: "throughput",
-          title: "Throughput ↑",
-          xAxisTitle: "Deployment setting",
-          yAxisTitle: "Runs per hour",
-          unit: " r/h",
-          caption: "A second chart demonstrates how later studies can be added without touching the renderer.",
-          categories: ["Lab", "Novel scene", "Long horizon"],
-          series: [
-            { name: "Baseline 1", values: [12, 9, 7], color: "#7c83ff" },
-            { name: "Baseline 2", values: [16, 13, 11], color: "#ff8a65" },
-            { name: "Project Title", values: [24, 21, 18], color: "#26c6da", highlight: true }
-          ]
-        }
-      ],
-      dataPie: {
-        title: "Dataset Composition",
-        caption: "Hover a slice to highlight the source mix and inspect its exact share.",
-        labels: ["Human demos", "Model rollouts", "Held-out tasks", "Failure cases"],
-        values: [42, 28, 18, 12],
-        colors: ["#ef6a5b", "#4f8cff", "#2fbf8f", "#f2b84b"]
-      },
+      // verticalCharts: [
+      //   {
+      //     id: "success-rate",
+      //     title: "Success Rate (%) ↑",
+      //     xAxisTitle: "Evaluation task",
+      //     yAxisTitle: "Success rate",
+      //     unit: "%",
+      //     caption: "Grouped task results in a kai0-inspired vertical chart. Hover over each bar to inspect exact values.",
+      //     categories: ["Task A", "Task B", "Task C"],
+      //     series: [
+      //       { name: "Baseline 1", values: [42, 51, 60], color: "#4f8cff" },
+      //       { name: "Baseline 2", values: [58, 63, 68], color: "#f2b84b" },
+      //       { name: "Project Title", values: [82, 86, 90], color: "#2fbf8f", highlight: true }
+      //     ]
+      //   },
+      //   {
+      //     id: "throughput",
+      //     title: "Throughput ↑",
+      //     xAxisTitle: "Deployment setting",
+      //     yAxisTitle: "Runs per hour",
+      //     unit: " r/h",
+      //     caption: "A second chart demonstrates how later studies can be added without touching the renderer.",
+      //     categories: ["Lab", "Novel scene", "Long horizon"],
+      //     series: [
+      //       { name: "Baseline 1", values: [12, 9, 7], color: "#7c83ff" },
+      //       { name: "Baseline 2", values: [16, 13, 11], color: "#ff8a65" },
+      //       { name: "Project Title", values: [24, 21, 18], color: "#26c6da", highlight: true }
+      //     ]
+      //   }
+      // ],
+      // dataPie: {
+      //   title: "Dataset Composition",
+      //   caption: "Hover a slice to highlight the source mix and inspect its exact share.",
+      //   labels: ["Human demos", "Model rollouts", "Held-out tasks", "Failure cases"],
+      //   values: [42, 28, 18, 12],
+      //   colors: ["#ef6a5b", "#4f8cff", "#2fbf8f", "#f2b84b"]
+      // },
       references: [
         {
-          id: "ref-main",
+          id: "ref-vggt",
           label: "[1]",
-          title: "Paper Title",
-          authors: "Author et al.",
-          venue: "Conference",
-          year: "2026",
-          url: "https://example.com"
+          title: "VGGT: Visual Geometry Grounded Transformer",
+          authors: "Wang, Jianyuan and Chen, Minghao and Karaev, Nikita and Vedaldi, Andrea and Rupprecht, Christian and Novotny, David",
+          venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+          year: "2025",
+          url: "https://github.com/facebookresearch/vggt"
         },
         {
-          id: "ref-data",
+          id: "ref-sam2",
           label: "[2]",
-          title: "Dataset Source Paper",
-          authors: "Dataset Author et al.",
-          venue: "Workshop",
-          year: "2026",
-          url: "https://example.com/data"
-        },
-        {
-          id: "ref-model",
-          label: "[3]",
-          title: "Model Architecture Reference",
-          authors: "Model Author et al.",
-          venue: "Journal",
-          year: "2026",
-          url: "https://example.com/model"
+          title: "SAM 2: Segment Anything in Images and Videos",
+          authors: "Ravi, Nikhila and Gabeur, Valentin and Hu, Yuan-Ting and Hu, Ronghang and Ryali, Chaitanya and Ma, Tengyu and Khedr, Haitham and R{\"a}dle, Roman and Rolland, Chloe and Gustafson, Laura and Mintun, Eric and Pan, Junting and Alwala, Kalyan Vasudev and Carion, Nicolas and Wu, Chao-Yuan and Girshick, Ross and Doll{\'a}r, Piotr and Feichtenhofer, Christoph",
+          venue: "arXiv preprint arXiv:2408.00714",
+          year: "2024",
+          url: "https://github.com/facebookresearch/sam2"
         }
+        // {
+        //   id: "ref-main",
+        //   label: "[2]",
+        //   title: "Paper Title",
+        //   authors: "Author et al.",
+        //   venue: "Conference",
+        //   year: "2026",
+        //   url: "https://example.com"
+        // },
+        // {
+        //   id: "ref-data",
+        //   label: "[3]",
+        //   title: "Dataset Source Paper",
+        //   authors: "Dataset Author et al.",
+        //   venue: "Workshop",
+        //   year: "2026",
+        //   url: "https://example.com/data"
+        // },
+        // {
+        //   id: "ref-model",
+        //   label: "[4]",
+        //   title: "Model Architecture Reference",
+        //   authors: "Model Author et al.",
+        //   venue: "Journal",
+        //   year: "2026",
+        //   url: "https://example.com/model"
+        // }
       ],
       footer: {
         organization: "Colalab",
@@ -164,7 +179,7 @@
       <div class="page-nav-links">
         <a href="#overview" data-nav-link>Overview</a>
         <a href="#model" data-nav-link>Model</a>
-        <a href="#data" data-nav-link>Data</a>
+        <!-- <a href="#data" data-nav-link>Data</a> -->
         <a href="#results" data-nav-link>Results</a>
         <a href="#citation" data-nav-link>Citation</a>
       </div>
@@ -225,7 +240,7 @@
       </div>
       <div class="hero-title-in-cola">
         <h1 class="publication-title publication-title-cola" data-hero-title>
-          <span class="title-mark">Project Title:</span> An Open-Source Generalist Research Project
+          <span class="title-mark">VGGT-Segmentor:</span> Geometry-Enhanced Cross-View Segmentation
         </h1>
       </div>
     </section>
@@ -234,7 +249,7 @@
       <div class="container content-narrow">
         <div class="collapsed-title-bar" data-collapsed-title>
           <h2 class="collapsed-title">
-            <span class="title-mark">Project Title:</span> An Open-Source Generalist Research Project
+            <span class="title-mark">VGGT-Segmentor:</span> Geometry-Enhanced Cross-View Segmentation
           </h2>
           <div class="after-hero-cola" aria-hidden="true">
             <div class="after-hero-bubbles">
@@ -255,14 +270,15 @@
           <p class="team-label">Project Team</p>
 
           <div class="author-line author-line-blue">
-            <span class="author-block">First Author<sup>*</sup>,<sup>1</sup></span>
-            <span class="author-block">Second Author<sup>*</sup>,<sup>1</sup></span>
-            <span class="author-block">Third Author<sup>*</sup>,<sup>1,2</sup></span>
-            <span class="author-block">Fourth Author<sup>*</sup>,<sup>1</sup></span>
-            <span class="author-block">Fifth Author<sup>*</sup>,<sup>1</sup></span>
+            <span class="author-block">Yulu Gao<sup>*</sup><sup>1</sup>,</span>
+            <span class="author-block">Bohao Zhang<sup>*</sup><sup>2</sup>,</span>
+            <span class="author-block">Zongheng Tang<sup></sup><sup>1</sup>,</span>
+            <span class="author-block">Jitong Liao<sup></sup><sup>2</sup>,</span>
+            <span class="author-block">Wenjun Wu<sup></sup><sup>2</sup>,</span>
+            <span class="author-block">Si Liu<sup>†</sup><sup>2</sup></span>
           </div>
 
-          <div class="author-line author-line-amber">
+          <!-- <div class="author-line author-line-amber">
             <span class="author-block">Sixth Author<sup>3</sup></span>
             <span class="author-block">Seventh Author<sup>2</sup></span>
             <span class="author-block">Eighth Author<sup>1</sup></span>
@@ -279,44 +295,65 @@
             <span class="author-block">Sixteenth Author<sup>2</sup></span>
             <span class="author-block">Seventeenth Author<sup>2</sup></span>
             <span class="author-block">Eighteenth Author<sup>1</sup></span>
-          </div>
-
-          <p class="authors-note">*denotes equal contribution, listed in alphabetical order</p>
+          </div> -->
 
           <div class="affiliation-line">
-            <span>1. Institution One</span>
-            <span>2. Institution Two</span>
-            <span>3. Institution Three</span>
-            <span>4. Institution Four</span>
+            <span>1. Hangzhou International Innovation Institute of Beihang University</span>
+            <span>2. Beihang University</span>
+            <!-- <span>3. Institution Three</span>
+            <span>4. Institution Four</span> -->
           </div>
+
+          <p class="authors-note">* denotes equal contribution,</p>
+          <p class="authors-note">† denotes corresponding author</p>
         </div>
 
         <div class="resource-grid">
-          <a href="static/pdfs/sample.pdf" target="_blank" class="resource-card">
+          <a href="https://arxiv.org/abs/2604.13596" target="_blank" class="resource-card">
             <iconify-icon class="resource-icon resource-icon-paper" icon="academicons:arxiv" aria-hidden="true"></iconify-icon>
             <span>Paper</span>
           </a>
-          <a href="static/pdfs/sample.pdf" target="_blank" class="resource-card">
+          <!-- <a href="static/pdfs/sample.pdf" target="_blank" class="resource-card">
             <iconify-icon class="resource-icon resource-icon-pdf" icon="fluent:document-copy-24-filled" aria-hidden="true"></iconify-icon>
             <span>Supplementary</span>
-          </a>
-          <a href="https://github.com" target="_blank" class="resource-card">
+          </a> -->
+          <a href="https://github.com/buaa-colalab/VGGT-S" target="_blank" class="resource-card">
             <iconify-icon class="resource-icon resource-icon-code" icon="simple-icons:github" aria-hidden="true"></iconify-icon>
             <span>Code</span>
           </a>
-          <a href="https://huggingface.co" target="_blank" class="resource-card">
+          <a href="https://huggingface.co/zbbhhh/VGGT-S" target="_blank" class="resource-card">
             <iconify-icon class="resource-icon resource-icon-model" icon="mdi:weight-kilogram" aria-hidden="true"></iconify-icon>
             <span>Weights</span>
           </a>
-          <a href="https://huggingface.co/datasets" target="_blank" class="resource-card">
+          <!-- <a href="https://huggingface.co/datasets" target="_blank" class="resource-card">
             <iconify-icon class="resource-icon resource-icon-datasets" icon="solar:database-bold-duotone" aria-hidden="true"></iconify-icon>
             <span>Datasets</span>
-          </a>
+          </a> -->
         </div>
       </div>
     </section>
 
+
     <section class="media-band">
+      <div class="container single-video-container">
+
+        <article class="media-tile single-video">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="static/videos/exo2ego.mp4" type="video/mp4">
+          </video>
+
+          <span class="media-speed-badge">1x</span>
+
+          <!-- Optional caption -->
+          <p class="media-caption">
+            Exo → Ego Cross-View Segmentation
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- <section class="media-band">
       <div class="container media-carousel" data-carousel>
         <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Previous slide" data-carousel-prev>
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -328,13 +365,13 @@
           <div class="media-carousel-track" data-carousel-track>
             <article class="media-tile" data-carousel-slide>
               <video autoplay muted loop playsinline preload="metadata">
-                <source src="static/videos/carousel1.mp4" type="video/mp4">
+                <source src="static/videos/exo2ego.mp4" type="video/mp4">
               </video>
               <span class="media-speed-badge">1x</span>
             </article>
             <article class="media-tile" data-carousel-slide>
               <video autoplay muted loop playsinline preload="metadata">
-                <source src="static/videos/carousel2.mp4" type="video/mp4">
+                <source src="static/videos/ego2exo.mp4" type="video/mp4">
               </video>
               <span class="media-speed-badge">1x</span>
             </article>
@@ -361,21 +398,25 @@
 
         <div class="carousel-dots" data-carousel-dots></div>
       </div>
-    </section>
+    </section> -->
 
     <section class="section content-section" id="overview">
       <div class="container content-wide">
         <div class="paragraph-with-reference paragraph-with-reference-lead">
           <p class="lead-paragraph">
-            We introduce <strong>Project Title</strong>, our placeholder effort for building an open-source, widely applicable
-            research system <a class="inline-ref" href="#ref-main" data-ref="ref-main">[1]</a>. This page is organized to
+            <!-- We introduce <strong>VGGT-Segmentor</strong>, our placeholder effort for building an open-source, widely applicable
+            research system <a class="inline-ref" href="#ref-vggt" data-ref="ref-main">[1]</a>. This page is organized to
             highlight the central idea, team, resources, media, method, data, and results while keeping the title, authors,
-            figures, and links easy to replace with your own project details.
+            figures, and links easy to replace with your own project details. -->
+             <!-- is a geometry-grounded segmentation framework built upon VGGT<a class="inline-ref" href="#ref-vggt">[1]</a> for instance-level object segmentation across egocentric and exocentric views under large viewpoint, scale, and occlusion variations. -->
+            We propose <strong>VGGT-Segmentor</strong>, a geometry-aware framework for segmenting the same physical object across egocentric and exocentric views. 
+            Built upon VGGT<a class="inline-ref" href="#ref-vggt">[1]</a>, with powerful multi-view geometric representations, 
+            VGGT-Segmentor combines mask prompt fusion, point-guided prediction, and iterative refinement to achieve robust cross-view segmentation under extreme viewpoint, scale, and occlusion changes.
           </p>
-          <aside class="paragraph-reference-note" data-reference-note="ref-main" aria-label="Reference for this paragraph"></aside>
+          <aside class="paragraph-reference-note" data-reference-note="ref-vggt" aria-label="Reference for vggt"></aside>
         </div>
 
-        <div class="method-diagram-scroll" data-method-diagram>
+        <!-- <div class="method-diagram-scroll" data-method-diagram>
           <div class="method-diagram-stage" aria-label="Interactive method diagram">
             <div class="method-node method-node-data is-active" data-method-node="data">
               <span class="method-node-kicker">01</span>
@@ -430,19 +471,19 @@
               </article>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="video-card">
           <div class="video-card-copy">
             <span class="eyebrow-label">Project video</span>
             <h3>Overview presentation</h3>
-            <p>Use this embedded video slot for a paper overview, experiment montage, or narrated demo.</p>
+            <p>Hope you enjoy our overview video! Please check it out for a fun and intuitive introduction to VGGT-Segmentor and our geometry-enhanced cross-view segmentation framework.</p>
           </div>
           <figure class="video-embed-wrap">
             <iframe
               width="800"
               height="450"
-              src="https://www.youtube.com/embed/JkaxUblCGz0"
+              src="https://www.youtube.com/embed/56TSdPqQtgA"
               title="Project video"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -458,15 +499,19 @@
         <h2 class="section-title">The Model</h2>
         <div class="paragraph-with-reference">
           <p class="body-paragraph">
-            The design of Project Title emphasizes flexibility and scale: the system is meant to support multiple task
-            definitions, observation layouts, and deployment settings while remaining simple enough to finetune or adapt
-            <a class="inline-ref" href="#ref-model" data-ref="ref-model">[3]</a>. This placeholder block should eventually
-            describe your architecture, input modalities, output space, and why the method is broadly useful.
+            VGGT-Segmentor consists of a VGGT Encoder and a lightweight Union Segmentation Head. 
+            The Union Segmentation Head is composed of three stages: Mask Prompt Fusion, Point-Guided Prediction, and Mask Refinement. 
+            During the design of the Union Segmentation Head, we drew significant inspiration from Segment Anything Model 2<a class="inline-ref" href="#ref-sam2">[2]</a>.
           </p>
-          <aside class="paragraph-reference-note" data-reference-note="ref-model" aria-label="Reference for this paragraph"></aside>
+          <aside class="paragraph-reference-note" data-reference-note="ref-sam2" aria-label="Reference for sam2"></aside>
         </div>
 
-        <div class="model-architecture" data-model-architecture>
+        <div class="architecture-viewer">
+          <img
+            src="static/images/architecture.jpg"
+            alt="VGGT-Segmentor Architecture">
+        </div>
+        <!-- <div class="model-architecture" data-model-architecture>
           <div class="model-architecture-header">
             <div>
               <span class="eyebrow-label">Mode consistency architecture</span>
@@ -563,11 +608,11 @@
             <span><i class="legend-dot legend-dot-deploy"></i>Inference</span>
             <span><i class="legend-dot legend-dot-feedback"></i>Feedback</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
-    <section class="section content-section" id="data">
+    <!-- <section class="section content-section" id="data">
       <div class="container content-wide">
         <h2 class="section-title">The Data</h2>
         <div class="paragraph-with-reference">
@@ -600,37 +645,51 @@
           <div class="data-pie-plot" data-data-pie aria-label="Interactive dataset composition pie chart"></div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="section content-section" id="results">
       <div class="container content-wide">
         <h2 class="section-title">The Results</h2>
         <div class="paragraph-with-reference">
           <p class="body-paragraph">
-            We evaluate Project Title across several placeholder tasks and scenarios. This section is intended to hold your
+            <!-- We evaluate Project Title across several placeholder tasks and scenarios. This section is intended to hold your
             main quantitative comparison, finetuning or ablation results, and a concise narrative for where the gains come
             from <a class="inline-ref" href="#ref-main" data-ref="ref-main">[1]</a>. The tables below use a compact
-            black-rule academic style for dense quantitative comparison.
+            black-rule academic style for dense quantitative comparison. -->
+            We evaluate our method on the Ego-Exo4D benchmark and report the results here. 
+            Our approach achieves <strong>67.7%</strong> IoU on Ego→Exo and <strong>68.0%</strong> IoU on Exo→Ego, 
+            surpassing the previous state-of-the-art method, DOMR, by 18.0% and 12.8%, respectively. 
+            Compared to the LLM-based ObjectRelator, our method outperforms it by 22.3% and 17.1% in the two directions.
+            In the zero-shot learning(ZSL) setting, our model achieves <strong>54.1%</strong> IoU on Ego→Exo and <strong>58.4%</strong> IoU on Exo→Ego.
           </p>
-          <aside class="paragraph-reference-note" data-reference-note="ref-main" aria-label="Reference for this paragraph"></aside>
+          <!-- <aside class="paragraph-reference-note" data-reference-note="ref-main" aria-label="Reference for this paragraph"></aside> -->
         </div>
 
         <div class="metrics-dashboard" data-metrics-dashboard>
           <div class="metrics-header">
             <div>
               <span class="eyebrow-label">Benchmarks</span>
-              <h3>Interactive metric comparison</h3>
+              <h3>Results on EgoExo4D</h3>
             </div>
-            <div class="metric-tabs" role="tablist" aria-label="Metric datasets">
+            <!-- <div class="metric-tabs" role="tablist" aria-label="Metric datasets">
               <button class="metric-tab is-active" type="button" data-metric-tab="success">Success</button>
               <button class="metric-tab" type="button" data-metric-tab="generalization">Generalization</button>
               <button class="metric-tab" type="button" data-metric-tab="efficiency">Efficiency</button>
+            </div> -->
+            <div class="metric-tabs" role="tablist" aria-label="Metric datasets">
+              <button class="metric-tab is-active" type="button" data-metric-tab="ego2exo">
+                Ego→Exo
+              </button>
+
+              <button class="metric-tab" type="button" data-metric-tab="exo2ego">
+                Exo→Ego
+              </button>
             </div>
           </div>
           <div class="metric-chart" data-metric-chart aria-label="Metric bar chart"></div>
         </div>
 
-        <div class="vertical-results-panel" data-vertical-results>
+        <!-- <div class="vertical-results-panel" data-vertical-results>
           <div class="vertical-results-header">
             <div>
               <span class="eyebrow-label">Ablation view</span>
@@ -653,9 +712,9 @@
             </button>
           </div>
           <div class="vertical-chart-progress" data-vertical-progress aria-label="Chart progress"></div>
-        </div>
+        </div> -->
 
-        <div class="demo-gallery" data-demo-gallery>
+        <!-- <div class="demo-gallery" data-demo-gallery>
           <div class="demo-gallery-copy">
             <span class="eyebrow-label">Demo gallery</span>
             <h3>Qualitative rollouts</h3>
@@ -714,9 +773,9 @@
             </button>
           </div>
           <div class="demo-gallery-dots" data-demo-dots></div>
-        </div>
+        </div> -->
 
-        <div class="tables-panel" data-enhanced-tables>
+        <!-- <div class="tables-panel" data-enhanced-tables>
           <div class="demo-gallery-copy tables-panel-copy">
             <span class="eyebrow-label">Result tables</span>
             <h3>Quantitative comparison</h3>
@@ -759,9 +818,9 @@
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> -->
 
-            <div class="table-card table-card-wide">
+            <!-- <div class="table-card table-card-wide">
               <div class="table-scroll">
                 <table class="results-table results-table-wide">
                   <thead>
@@ -813,20 +872,20 @@
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> -->
           </div>
-          <p class="table-caption">Table 1. Placeholder benchmark summary for zero-shot and finetuning settings.</p>
+          <!-- <p class="table-caption">Table 1. Placeholder benchmark summary for zero-shot and finetuning settings.</p>
           <div class="table-footnotes">
             <span><sup>*</sup> New observation input placeholder</span>
             <span><sup>&dagger;</sup> New action space placeholder</span>
-          </div>
+          </div> -->
         </div>
 
-        <p class="body-paragraph body-paragraph-spaced">
+        <!-- <p class="body-paragraph body-paragraph-spaced">
           Out-of-the-box, this placeholder page provides a large title treatment, compact author metadata, a horizontal
           resource row, a full-width visual band, a single-column narrative, and two dense quantitative tables. The
           remaining work is swapping in your real content.
-        </p>
+        </p> -->
       </div>
     </section>
 
@@ -841,14 +900,13 @@
             <span class="copy-text">Copy</span>
           </button>
         </div>
-        <p class="citation-note">Please replace the placeholder BibTeX below with your actual paper metadata.</p>
+        <p class="citation-note">If you use VGGT-Segmentor in your research, please use the following BibTeX entry.</p>
         <div class="references-mobile" data-reference-mobile aria-label="References"></div>
-        <pre id="bibtex-code"><code>@inproceedings{project2026,
-  title={Project Title: An Open-Source Generalist Research Project},
-  author={First Author and Second Author and Third Author and Fourth Author},
-  booktitle={Conference Name},
-  year={2026},
-  url={https://your-project-page.example}
+        <pre id="bibtex-code"><code>@article{gao2026vggt,
+  title={VGGT-Segmentor: Geometry-Enhanced Cross-View Segmentation},
+  author={Gao, Yulu and Zhang, Bohao and Tang, Zongheng and Liao, Jitong and Wu, Wenjun and Liu, Si},
+  journal={arXiv preprint arXiv:2604.13596},
+  year={2026}
 }</code></pre>
       </div>
     </section>

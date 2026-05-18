@@ -729,6 +729,27 @@ body.hero-collapsed .collapsed-title-bar {
   transform: translateY(-1px);
 }
 
+.architecture-viewer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.architecture-viewer img {
+  width: min(96vw, 1600px);
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+.media-caption {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .media-band {
   width: 100%;
   background: var(--panel-bg-soft);
